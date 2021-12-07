@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Tacos
 {
@@ -13,7 +14,7 @@ namespace Tacos
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var cs = "server=localhost;port=3307;database=tacos;uid=tacos;password=tacos;TreatTinyAsBoolean=false";
+            var cs = "server=localhost;port=3306;database=tacos;uid=root;password=;TreatTinyAsBoolean=false";
             optionsBuilder.UseMySql(cs, ServerVersion.AutoDetect(cs));
         }
 
